@@ -3,6 +3,14 @@ spring:
     name: likelion-spring
 
   datasource:
-    url: likelion-database.c9qy0akgsvnw.ap-northeast-2.rds.amazonaws.com
+    url: jdbc:mysql://likelion-database.ch6ke08isvxb.ap-northeast-2.rds.amazonaws.com/likelion
     username: likelion
     password: likelion1234
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
